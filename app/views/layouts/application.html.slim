@@ -10,7 +10,7 @@ html lang="en"
     /! Uncomment to make IE8 render like IE7
     /! <meta http-equiv="X-UA-Compatible" content="IE=7" />
     /! Set the viewport width to device width for mobile
-    meta content="width=(device-width,)initial-scale=1.0" name="viewport"
+    meta content="width=device-width" name="viewport"
     title= content_for?(:title) ? yield(:title) : "Untitled"
     = stylesheet_link_tag    "application"
     = javascript_include_tag "vendor/custom.modernizr"
@@ -18,5 +18,34 @@ html lang="en"
   body
     - flash.each do |name, msg|
       == content_tag :div, msg, class: name
-    = yield
+    #container
+      header#header
+        hgroup
+          h1 Haml2Slim
+          h3.subheader Convert Haml to Slim
+        p
+          span.round.alert.label> Limitation
+          ' Due to the complex logic behind both Haml's and Slim's parsers, there
+          ' is currently no way of reliably converting between Haml and Slim
+          ' templates.
+          code<> Haml2Slim
+          ' only serves as a preliminary tool for templates conversion. You
+          ' should <strong>always</strong> manually verify the converted templates.
+        hr
+      #content
+        = yield
+      footer#footer
+        p.twitter
+          a href='http://https://twitter.com/kpricorn_'
+            ' Follow us on twitter
+        p.haml2slim
+          a href='https://github.com/slim-template/haml2slim'
+            ' Haml2Slim
+          ' gem Version:
+          code== Haml2Slim::VERSION
+        p.source
+          | Source:
+          a<> href='https://github.com/kpricorn/haml2slim' haml2slim
+        .gs
+          .img
     = javascript_include_tag "application"
