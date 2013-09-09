@@ -11,6 +11,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'sqlite3'
+gem 'zurb-foundation'
+gem 'bourbon'
+gem "rails-sass-images"
 
 group :doc do
   gem 'sdoc', require: false
@@ -20,8 +23,6 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
 end
-
-gem 'zurb-foundation', '~> 4.0.0'
 
 gem 'unicorn'
 
