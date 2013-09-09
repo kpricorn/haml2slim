@@ -1,0 +1,10 @@
+#container {
+  @include grid-row;
+  #footer {
+    .gs {
+      .img {
+        /*@include gs-footer-logo;*/
+      }
+    }
+  }
+}
