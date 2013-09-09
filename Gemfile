@@ -10,10 +10,10 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'sqlite3'
 gem 'zurb-foundation'
 gem 'bourbon'
 gem "rails-sass-images"
+gem 'gsass'
 
 group :doc do
   gem 'sdoc', require: false
@@ -22,6 +22,7 @@ end
 group :test do
   gem 'capybara'
   gem 'poltergeist'
+  gem 'launchy'
 end
 
 gem 'unicorn'

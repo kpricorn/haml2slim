@@ -1,10 +1,48 @@
-#container {
-  @include grid-row;
-  #footer {
-    .gs {
-      .img {
-        /*@include gs-footer-logo;*/
-      }
+body, footer.outer {
+  background-color: #111;
+}
+
+.outer {
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: #F6F4E0;
+  .inner {
+    @include grid-row;
+  }
+}
+
+header {
+  .flash > div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .notice {
+    color: $success-color;
+  }
+}
+
+#content {
+  .field {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    textarea {
+      height: 300px;
+    }
+  }
+}
+
+footer {
+  @include transition(opacity 0.3s);
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .gs {
+    .img {
+      @include gs-footer-logo;
     }
   }
 }

@@ -11,15 +11,16 @@ html lang="en"
     /! <meta http-equiv="X-UA-Compatible" content="IE=7" />
     /! Set the viewport width to device width for mobile
     meta content="width=device-width" name="viewport"
-    title= content_for?(:title) ? yield(:title) : "Untitled"
+    title Haml2Slim – Convert Haml to Slim
     = stylesheet_link_tag    "application"
     = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   body
-    - flash.each do |name, msg|
-      == content_tag :div, msg, class: name
-    #container
-      header#header
+    header.outer
+      .inner
+        .flash
+          - flash.each do |name, msg|
+            == content_tag :div, msg, class: name
         hgroup
           h1 Haml2Slim
           h3.subheader Convert Haml to Slim
@@ -32,20 +33,22 @@ html lang="en"
           ' only serves as a preliminary tool for templates conversion. You
           ' should <strong>always</strong> manually verify the converted templates.
         hr
-      #content
+    #content.outer
+      .inner
         = yield
-      footer#footer
+    footer.outer
+      .inner
         p.twitter
           a href='http://https://twitter.com/kpricorn_'
             ' Follow us on twitter
         p.haml2slim
           a href='https://github.com/slim-template/haml2slim'
             ' Haml2Slim
-          ' gem Version:
+          ' gem version:
           code== Haml2Slim::VERSION
         p.source
           | Source:
           a<> href='https://github.com/kpricorn/haml2slim' haml2slim
         .gs
-          .img
+          a.img href='http://gorillasoftware.ch'
     = javascript_include_tag "application"
