@@ -4,6 +4,6 @@ class Conversion
   attr_accessor :haml, :slim
 
   def slim
-    @slim ||= Haml2Slim::Converter.new(@haml).to_s
+    Haml2Slim::Converter.new(@haml || '')
   end
 end
