@@ -52,3 +52,4 @@ html lang="en"
         .gs
           a.img href='http://gorillasoftware.ch'
     = javascript_include_tag "application"
+    = analytics_init if Rails.env.production?

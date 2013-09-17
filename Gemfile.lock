@@ -57,6 +57,7 @@ GEM
     dimensions (1.2.0)
     erubis (2.7.0)
     execjs (2.0.1)
+    google-analytics-rails (0.0.4)
     gsass (0.0.3)
       rails-sass-images
       sass (>= 3.2.0)
@@ -194,6 +195,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   debugger
+  google-analytics-rails
   gsass
   haml (>= 3.0.0)
   haml2slim

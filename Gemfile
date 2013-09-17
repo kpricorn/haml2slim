@@ -14,6 +14,7 @@ gem 'zurb-foundation'
 gem 'bourbon'
 gem "rails-sass-images"
 gem 'gsass'
+gem 'google-analytics-rails'
 
 group :doc do
   gem 'sdoc', require: false
